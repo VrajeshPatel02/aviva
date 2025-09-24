@@ -1,6 +1,6 @@
 import { Card, CardContent } from "@/components/ui/card"
 import { Target, Eye, Award } from "lucide-react"
-import { AnimatedText } from "@/components/ui/animated-underline-text-one"
+import Image from "next/image"
 
 export function WhoWeAre() {
   return (
@@ -9,11 +9,9 @@ export function WhoWeAre() {
         <div className="max-w-6xl mx-auto">
           <div className="grid lg:grid-cols-2 gap-12 items-center mb-16">
             <div>
-              <AnimatedText
-                text="Who We Are"
-                textClassName="text-3xl md:text-4xl font-bold text-balance mb-6"
-                className="mb-6"
-              />
+              <h1 className="heading mb-6">
+                Who We Are
+              </h1>
               <p className="text-lg text-muted-foreground text-balance mb-6">
                 AVIVA HVAC & Clean Room Industries is a leading manufacturer and supplier of high-quality HVAC systems
                 and clean room solutions. Based in Daman, we serve clients across India and internationally.
@@ -34,10 +32,12 @@ export function WhoWeAre() {
               </div>
             </div>
             <div className="relative">
-              <img
-                src="/placeholder.svg?height=400&width=500"
+              <Image
+                src="/Team.jpg?height=400&width=500"
                 alt="AVIVA Manufacturing Facility"
                 className="w-full h-80 object-cover rounded-lg shadow-lg"
+                width={400}
+                height={500}
               />
             </div>
           </div>

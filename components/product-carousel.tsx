@@ -29,7 +29,7 @@ const products = [
   {
     title: "Clean Room Doors",
     description: "Custom-made clean room doors designed for prevention of cross contamination.",
-    image: "https://images.unsplash.com/photo-1586023492125-27b2c045efd7?auto=format&fit=crop&w=800&q=80",
+    image: "https://images.unsplash.com/photo-1558618047-3c8c76ca7d13?auto=format&fit=crop&w=800&q=80",
     features: ["Minimum air leakage", "Vision windows", "Fire rated options", "GMP standards"],
   },
   {
@@ -54,7 +54,7 @@ export function ProductCarousel() {
 
   return (
     <section id="products" className="py-20 bg-gradient-to-br from-slate-50 to-slate-100">
-      <div className="container mx-auto px-4">
+      <div className="container  mx-auto px-4">
         <div className="text-center mb-16">
           <h2 className="text-3xl md:text-4xl font-bold text-balance mb-4">
             Our <span className="text-primary">Products</span> & Solutions

@@ -1,5 +1,6 @@
 import { Card, CardContent } from "@/components/ui/card"
-import { AnimatedText } from "@/components/ui/animated-underline-text-one"
+// import AnimatedText removed
+import { BoxReveal } from "@/components/ui/box-reveal"
 
 const industries = [
   {
@@ -45,11 +46,7 @@ export function IndustriesWeServe() {
     <section id="industries" className="py-20">
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
-          <AnimatedText
-            text="Industries We Serve"
-            textClassName="text-3xl md:text-4xl font-bold text-balance mb-4"
-            className="mb-4"
-          />
+            <h2 className="heading mb-4">Industries We Serve</h2>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto text-balance">
             Providing specialized HVAC and clean room solutions across diverse sectors with stringent environmental
             control requirements.

@@ -39,13 +39,11 @@ const reasons = [
 export function WhyChooseUs() {
   return (
     <section className="py-12 md:py-20 bg-gradient-to-br from-slate-50 to-slate-100">
-      <div className="mx-auto max-w-5xl space-y-8 px-6 md:space-y-16">
-        <div className="relative z-10 mx-auto max-w-xl space-y-6 text-center md:space-y-12">
-          <AnimatedText
-            text="Why Choose AVIVA?"
-            textClassName="text-4xl font-medium lg:text-5xl text-balance"
-            className="mb-4"
-          />
+      <div className="mx-auto max-w-5xl space-y-8 px-6 md:space-y-16 ">
+        <div className="relative z-10 mx-auto max-w-xl text-center md:space-y-6">
+          <h1 className="heading">
+            Why Choose AVIVA?
+          </h1>
           <p className="text-balance">
             We offer comprehensive solutions for controlled, classified, and comfort air systems with prevention of
             viable and non-viable contamination.

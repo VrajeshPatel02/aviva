@@ -3,6 +3,7 @@ import Link from "next/link"
 import type React from "react"
 import { useState, useEffect, useRef } from "react"
 import { Button } from "@/components/ui/button"
+import { HeroHighlight, Highlight } from "@/components/ui/hero-highlight";
 
 const carouselImages = [
   "/images/ahu.jpg",
@@ -82,12 +83,13 @@ const HeroCarousel: React.FC = () => {
       <div className="container mx-auto px-4 h-full flex items-center" style={{ position: "relative", zIndex: 3 }}>
       <div className="max-w-3xl">
         <h1 className="text-4xl md:text-6xl font-bold text-white mb-6 leading-tight">
-        Professional <span className="text-accent">HVAC & </span> 
-        <span className="text-primary">Clean Room</span>{" "}Solutions
+          Professional <Highlight >HVAC &</Highlight>
+          <br />
+          <Highlight>Clean Room</Highlight> Solutions
         </h1>
         <p className="text-xl md:text-2xl text-slate-200 mb-8 leading-relaxed max-w-2xl">
-        Manufacturing, supplying, and installing world-class HVAC systems and clean room solutions for
-        pharmaceutical, biotechnology, and industrial applications.
+          Manufacturing, supplying, and installing world-class HVAC systems and clean room solutions for
+          pharmaceutical, biotechnology, and industrial applications.
         </p>
 
         {/* Action Buttons */}

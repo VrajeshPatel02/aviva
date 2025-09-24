@@ -44,7 +44,7 @@ export function OurClientsClient({ clientLogos, stats }: Props) {
       <div className="container mx-auto px-4">
         {/* Stats */}
         <div className="text-center mb-16">
-          <h2 className="text-3xl md:text-4xl font-bold text-balance mb-4">
+          <h2 className="heading mb-4">
             Trusted by <span className="text-primary">Industry Leaders</span>
           </h2>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto text-balance mb-12">
@@ -73,7 +73,7 @@ export function OurClientsClient({ clientLogos, stats }: Props) {
               <div className="absolute left-0 top-0 bottom-0 w-20 bg-gradient-to-r from-background to-transparent z-10" />
               <div className="absolute right-0 top-0 bottom-0 w-20 bg-gradient-to-l from-background to-transparent z-10" />
 
-              <Marquee direction="left" speed={25} className="py-8">
+              <Marquee pauseOnHover className="py-8">
                 {leftMarqueeLogos.map((logo, index) => (
                   <div
                     key={index}
@@ -93,7 +93,7 @@ export function OurClientsClient({ clientLogos, stats }: Props) {
               <div className="absolute left-0 top-0 bottom-0 w-20 bg-gradient-to-r from-background to-transparent z-10" />
               <div className="absolute right-0 top-0 bottom-0 w-20 bg-gradient-to-l from-background to-transparent z-10" />
 
-              <Marquee direction="right" speed={30} className="py-8">
+              <Marquee reverse pauseOnHover className="py-8">
                 {rightMarqueeLogos.map((logo, index) => (
                   <div
                     key={index}

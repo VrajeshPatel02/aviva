@@ -3,8 +3,14 @@
 
 @custom-variant dark (&:is(.dark *));
 
+/* Import Google Fonts */
+@import url("https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700&family=Montserrat:wght@400;500;600;700&family=Work+Sans:wght@400;500;600;700&display=swap");
+
 :root {
   /* Updated color palette to match AVIVA brand colors */
+  --font-montserrat: "Montserrat", sans-serif;
+  --font-manrope: "Manrope", sans-serif;
+  --font-worksans: "Work Sans", sans-serif;
   --background: oklch(1 0 0); /* White */
   --foreground: oklch(0.35 0 0); /* Dark gray for text */
   --card: oklch(0.98 0 0); /* Light background for cards */
@@ -132,7 +138,24 @@
     transform: translateX(-50%);
     }
   }
-}
+  --animate-marquee-vertical: marquee-vertical var(--duration) linear infinite
+;
+  @keyframes marquee {
+  from {
+    transform: translateX(0);
+    }
+  to {
+    transform: translateX(calc(-100% - var(--gap)));
+    }
+  }
+  @keyframes marquee-vertical {
+  from {
+    transform: translateY(0);
+    }
+  to {
+    transform: translateY(calc(-100% - var(--gap)));
+    }
+  }}
 
 @layer base {
   * {
@@ -140,5 +163,10 @@
   }
   body {
     @apply bg-background text-foreground;
+    font-family: var(--font-montserrat);
+  }
+  .heading {
+    @apply text-4xl font-medium lg:text-5xl text-balance;
+    font-family: var(--font-manrope);
   }
 }

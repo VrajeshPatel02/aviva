@@ -51,10 +51,11 @@ const Gallery4 = ({
     <section className="py-20 bg-background">
       <div className="container mx-auto px-4">
         <div className="mb-16 flex items-end justify-between">
+          
           <div className="flex flex-col gap-4 w-full md:w-auto">
-            <h2 className="text-3xl font-medium md:text-4xl lg:text-5xl text-balance">{title}</h2>
+            <h2 className="heading">{title}</h2>
             <p className="text-xl text-muted-foreground max-w-3xl mx-auto text-balance">{description}</p>
-          </div>
+            </div>
           <div className="hidden shrink-0 gap-2 md:flex">
             <Button
               size="icon"
