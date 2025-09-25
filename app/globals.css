@@ -163,9 +163,9 @@
   }
   body {
     @apply bg-background text-foreground;
-    font-family: var(--font-montserrat);
+    font-family: var(--font-worksans);
   }
-  .heading {
+  .heading   {
     @apply text-4xl font-medium lg:text-5xl text-balance;
     font-family: var(--font-manrope);
   }

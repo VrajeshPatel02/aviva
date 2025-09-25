@@ -5,6 +5,7 @@ import { Button } from "@/components/ui/button"
 import { Calendar, Clock, ArrowRight, User } from "lucide-react"
 import Link from "next/link"
 import Image from "next/image"
+import { AvivaFooter } from "@/components/aviva-footer"
 
 const blogPosts = [
   {
@@ -98,13 +99,9 @@ export default function BlogPage() {
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-50 to-blue-50">
       {/* Hero Section */}
-      <section className="py-20 px-4">
-        <div className="max-w-6xl mx-auto text-center">
-          <AnimatedText
-            text="AVIVA Knowledge Hub"
-            textClassName="text-5xl md:text-6xl font-bold text-slate-800 mb-6"
-            underlineClassName="text-aviva-green"
-          />
+      <section className="py-8 px-4">
+        <div className="max-w-6xl mx-auto text-center mt-32">
+          <h1 className="heading">AVIVA <span className="text-primary">Knowledge Hub</span></h1>
           <p className="text-xl text-slate-600 max-w-3xl mx-auto leading-relaxed">
             Stay informed with the latest insights, best practices, and innovations in HVAC systems, clean room
             technology, and pharmaceutical manufacturing solutions.
@@ -231,22 +228,23 @@ export default function BlogPage() {
       </section>
 
       {/* Newsletter Section */}
-      <section className="py-16 px-4 bg-slate-800 text-white">
+      <section className="py-16 px-4 bg-secondary text-white">
         <div className="max-w-4xl mx-auto text-center">
           <h2 className="text-3xl font-bold mb-4">Stay Updated</h2>
-          <p className="text-slate-300 mb-8 text-lg">
+          <p className="text-slate-200 mb-8 text-lg">
             Subscribe to our newsletter for the latest insights in HVAC technology and clean room solutions.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 max-w-md mx-auto">
             <input
               type="email"
               placeholder="Enter your email"
-              className="flex-1 px-4 py-3 rounded-lg text-slate-800 focus:outline-none focus:ring-2 focus:ring-aviva-green"
+              className="flex-1 px-4 py-3 rounded-lg text-slate-800 outline focus:ring-2 focus:ring-aviva-green"
             />
-            <Button className="bg-aviva-green hover:bg-aviva-green/90 px-8">Subscribe</Button>
+            <Button className="bg-primary hover:bg-primary/90 px-8">Subscribe</Button>
           </div>
         </div>
       </section>
+      <AvivaFooter />
     </div>
   )
 }

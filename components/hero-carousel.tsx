@@ -82,7 +82,7 @@ const HeroCarousel: React.FC = () => {
 
       <div className="container mx-auto px-4 h-full flex items-center" style={{ position: "relative", zIndex: 3 }}>
       <div className="max-w-3xl">
-        <h1 className="text-4xl md:text-6xl font-bold text-white mb-6 leading-tight">
+        <h1 className="text-4xl md:text-6xl font-bold font-manrope text-white mb-6 leading-tight">
           Professional <Highlight >HVAC &</Highlight>
           <br />
           <Highlight>Clean Room</Highlight> Solutions
@@ -99,7 +99,7 @@ const HeroCarousel: React.FC = () => {
           className="bg-primary hover:bg-primary/90 text-white px-8 py-3 text-lg font-semibold"
           asChild
         >
-          <Link href="#contact">Get Quote</Link>
+          <Link href="/quote">Get Quote</Link>
         </Button>
         <Button
           size="lg"
@@ -107,13 +107,13 @@ const HeroCarousel: React.FC = () => {
           className="border-white text-white hover:bg-white hover:text-slate-900 px-8 py-3 text-lg font-semibold bg-transparent"
           asChild
         >
-          <Link href="#products">View Products</Link>
+          <Link href="/products">View Products</Link>
         </Button>
         </div>
 
         <div className="flex items-center gap-4">
         <Link
-          href="#about"
+          href="/about"
           className="text-slate-300 hover:text-white font-medium text-lg underline underline-offset-4 transition-colors"
         >
           Learn About AVIVA

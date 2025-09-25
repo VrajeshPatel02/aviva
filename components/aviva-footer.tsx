@@ -59,7 +59,7 @@ const contactInfo = [
 
 export function AvivaFooter() {
   return (
-    <footer className="bg-slate-900 text-white mt-16">
+    <footer className="bg-slate-900 text-white">
       <div className="container mx-auto px-4 pt-16 pb-6">
         <div className="grid grid-cols-1 gap-8 lg:grid-cols-4">
           {/* Company Info */}

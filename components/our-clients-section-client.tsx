@@ -3,6 +3,7 @@
 import { useState } from "react"
 import Image from "next/image"
 import { Marquee } from "@/components/ui/marquee"
+import { NumberTicker } from "@/components/ui/number-ticker"
 
 interface Stats {
   number: string
@@ -56,7 +57,7 @@ export function OurClientsClient({ clientLogos, stats }: Props) {
             {stats.map((stat, index) => (
               <div key={index} className="text-center group">
                 <div className="text-3xl md:text-4xl font-bold text-primary mb-2 group-hover:scale-110 transition-transform duration-300">
-                  {stat.number}
+                  <NumberTicker value={stat.number} />+
                 </div>
                 <div className="font-semibold text-slate-900 mb-1">{stat.label}</div>
                 <div className="text-sm text-muted-foreground">{stat.description}</div>
@@ -73,7 +74,7 @@ export function OurClientsClient({ clientLogos, stats }: Props) {
               <div className="absolute left-0 top-0 bottom-0 w-20 bg-gradient-to-r from-background to-transparent z-10" />
               <div className="absolute right-0 top-0 bottom-0 w-20 bg-gradient-to-l from-background to-transparent z-10" />
 
-              <Marquee pauseOnHover className="py-8">
+              <Marquee className="py-8">
                 {leftMarqueeLogos.map((logo, index) => (
                   <div
                     key={index}
@@ -93,7 +94,7 @@ export function OurClientsClient({ clientLogos, stats }: Props) {
               <div className="absolute left-0 top-0 bottom-0 w-20 bg-gradient-to-r from-background to-transparent z-10" />
               <div className="absolute right-0 top-0 bottom-0 w-20 bg-gradient-to-l from-background to-transparent z-10" />
 
-              <Marquee reverse pauseOnHover className="py-8">
+              <Marquee reverse className="py-8">
                 {rightMarqueeLogos.map((logo, index) => (
                   <div
                     key={index}

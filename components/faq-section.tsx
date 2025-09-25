@@ -57,7 +57,7 @@ export function FAQSection() {
     <section id="faq" className="py-20 bg-gradient-to-br from-slate-50 to-slate-100">
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
-          <h2 className="text-3xl md:text-4xl font-bold text-balance mb-4">
+          <h2 className="heading mb-4">
             Frequently Asked <span className="text-primary">Questions</span>
           </h2>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto text-balance">
@@ -76,7 +76,7 @@ export function FAQSection() {
                   className="w-full px-6 py-5 text-left flex items-center justify-between hover:bg-slate-50 transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-primary/20"
                   onClick={() => toggleFAQ(index)}
                 >
-                  <h3 className="text-lg font-semibold text-slate-900 pr-4">{faq.question}</h3>
+                  <h3 className="text-lg font-medium text-slate-900 pr-4">{faq.question}</h3>
                   <div className="flex-shrink-0">
                     {openFAQ === index ? (
                       <ChevronUp className="w-5 h-5 text-primary transition-transform duration-200" />

@@ -14,10 +14,10 @@ import { OurClientsClient } from "./our-clients-section-client"
 // }
 
 const stats = [
-  { number: "500+", label: "Satisfied Clients", description: "Companies trust our solutions" },
-  { number: "1000+", label: "Projects Completed", description: "Successful installations worldwide" },
-  { number: "25+", label: "Years Experience", description: "Decades of industry expertise" },
-  { number: "50+", label: "Countries Served", description: "Global reach and presence" },
+  { number: 500, label: "Satisfied Clients", description: "Companies trust our solutions" },
+  { number: 1000, label: "Projects Completed", description: "Successful installations worldwide" },
+  { number: 25, label: "Years Experience", description: "Decades of industry expertise" },
+  { number: 50, label: "Countries Served", description: "Global reach and presence" },
 ]
 
 const clients_logos = [

@@ -1,9 +1,11 @@
 import Image from "next/image"
+import Link from "next/link"
 import { Card, CardContent } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
 import { AnimatedText } from "@/components/ui/animated-underline-text-one"
 import { AvivaFooter } from "@/components/aviva-footer"
 import { CheckCircle, Award, Users, Globe, Target, Heart } from "lucide-react"
+import { NumberTicker } from "@/components/ui/number-ticker"
 
 export default function AboutPage() {
   const values = [
@@ -40,15 +42,15 @@ export default function AboutPage() {
     "Topical Product Formulation and Cosmetics",
     "Microbiology Laboratories",
     "Nano Technology Centers",
-    "Aseptic Labs / Sterile Facilities",
-    "Veterinary Product Industries",
-    "Cell Culture & Plant Culture Labs",
-    "Hospital Sector",
-    "Bio Medical Plants / Biotechnology",
-    "Primary Packaging Manufacturing",
-    "Food Production Facilities",
-    "Automotive Industries",
-    "Plastic and Textile Industries",
+    // "Aseptic Labs / Sterile Facilities",
+    // "Veterinary Product Industries",
+    // "Cell Culture & Plant Culture Labs",
+    // "Hospital Sector",
+    // "Bio Medical Plants / Biotechnology",
+    // "Primary Packaging Manufacturing",
+    // "Food Production Facilities",
+    // "Automotive Industries",
+    // "Plastic and Textile Industries",
   ]
 
   const services = [
@@ -58,24 +60,21 @@ export default function AboutPage() {
     "Fan Filter Units",
     "Air Shower Systems",
     "Pass Box Solutions",
-    "Laminar Air Flow Units",
-    "Bio Safety Cabinets",
-    "Sampling & Dispensing Booths",
-    "Air Curtain Systems",
-    "HVAC Ducting",
-    "Stainless Steel Furniture",
+    // "Laminar Air Flow Units",
+    // "Bio Safety Cabinets",
+    // "Sampling & Dispensing Booths",
+    // "Air Curtain Systems",
+    // "HVAC Ducting",
+    // "Stainless Steel Furniture",
   ]
 
   return (
     <main className="min-h-screen bg-background">
       {/* Hero Section */}
       <section className="relative py-20 bg-gradient-to-br from-primary/5 to-accent/5">
-        <div className="container mx-auto px-4">
+        <div className="container mx-auto px-4 mt-24">
           <div className="text-center max-w-4xl mx-auto">
-            <Badge variant="secondary" className="mb-4">
-              About AVIVA
-            </Badge>
-            <AnimatedText text="HVAC & Clean Room Industries" className="text-4xl lg:text-6xl font-bold mb-6" />
+            <h1 className="heading mb-2 font-medium">HVAC & Clean <span className="text-primary">Room Industries</span></h1>
             <p className="text-xl text-muted-foreground mb-8 leading-relaxed">
               Leading manufacturer and supplier of HVAC systems and clean room solutions, committed to providing quality
               products and services for the most demanding sectors and industries.
@@ -89,7 +88,7 @@ export default function AboutPage() {
         <div className="container mx-auto px-4">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <div>
-              <AnimatedText text="Who We Are" className="text-3xl font-bold mb-6" />
+              <h2 className="heading">Who <span className="text-primary">We Are</span></h2>
               <p className="text-lg text-muted-foreground mb-6 leading-relaxed">
                 AVIVA HVAC & Clean Room Industries is a premier manufacturer specializing in HVAC systems and clean room
                 solutions. We provide comprehensive manufacturing, supplying, and installation services for critical
@@ -100,19 +99,19 @@ export default function AboutPage() {
                 deliver customized solutions that meet the highest standards of quality and compliance.
               </p>
               <div className="grid grid-cols-2 gap-6">
-                <div className="text-center">
-                  <div className="text-3xl font-bold text-primary mb-2">15+</div>
+                <div className="text-left">
+                  <div className="text-3xl font-bold text-primary mb-2"><NumberTicker value={15}></NumberTicker>+</div>
                   <div className="text-sm text-muted-foreground">Years Experience</div>
                 </div>
-                <div className="text-center">
-                  <div className="text-3xl font-bold text-primary mb-2">500+</div>
+                <div className="text-left">
+                  <div className="text-3xl font-bold text-primary mb-2"><NumberTicker value={500}>+</NumberTicker>+</div>
                   <div className="text-sm text-muted-foreground">Projects Completed</div>
                 </div>
               </div>
             </div>
             <div className="relative">
               <Image
-                src="/placeholder.svg?height=600&width=800"
+                src="/Team.jpg"
                 alt="AVIVA Facility"
                 width={800}
                 height={600}
@@ -127,7 +126,7 @@ export default function AboutPage() {
       <section className="py-20 bg-muted/30">
         <div className="container mx-auto px-4">
           <div className="text-center mb-12">
-            <AnimatedText text="Our Core Values" className="text-3xl font-bold mb-4" />
+            <h2 className="heading">Our <span className="text-primary">Core Values</span></h2>
             <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
               Our commitment to excellence drives everything we do, from product design to customer service.
             </p>
@@ -151,7 +150,7 @@ export default function AboutPage() {
         <div className="container mx-auto px-4">
           <div className="grid lg:grid-cols-2 gap-12">
             <div>
-              <AnimatedText text="Industries We Serve" className="text-3xl font-bold mb-8" />
+              <h2 className="heading mb-1">Industries <span className="text-primary">We Serve</span></h2>
               <p className="text-lg text-muted-foreground mb-8 leading-relaxed">
                 We provide the best solutions for the most demanding sectors and industries, ensuring controlled
                 environments that meet strict regulatory requirements.
@@ -159,18 +158,18 @@ export default function AboutPage() {
               <div className="grid gap-3">
                 {industries.map((industry, index) => (
                   <div key={index} className="flex items-start gap-3">
-                    <CheckCircle className="h-5 w-5 text-accent mt-1 flex-shrink-0" />
+                    <CheckCircle className="h-5 w-5 text-accent mb-2 flex-shrink-0" />
                     <span className="text-sm">{industry}</span>
                   </div>
                 ))}
               </div>
             </div>
             <div>
-              <AnimatedText text="Our Services" className="text-3xl font-bold mb-8" />
-              <div className="grid gap-4">
+              <h2 className="heading mb-2">Our <span className="text-primary"> Services</span> </h2>
+              <div className="grid grid-cols-2 gap-4">
                 {services.map((service, index) => (
                   <Card key={index} className="border-l-4 border-l-primary">
-                    <CardContent className="p-4">
+                    <CardContent className="p-2">
                       <div className="flex items-center gap-3">
                         <Award className="h-5 w-5 text-primary flex-shrink-0" />
                         <span className="font-medium">{service}</span>
@@ -188,7 +187,7 @@ export default function AboutPage() {
       <section className="py-20 bg-primary text-primary-foreground">
         <div className="container mx-auto px-4">
           <div className="text-center max-w-4xl mx-auto">
-            <h2 className="text-3xl font-bold mb-6">Quality Policy</h2>
+            <h2 className="heading mb-6">Quality Policy</h2>
             <p className="text-xl leading-relaxed opacity-90">
               "We are committed to provide quality products and services to our customers and continually improve the
               effectiveness of the quality management system to achieve customer satisfaction."
@@ -200,24 +199,24 @@ export default function AboutPage() {
       {/* Contact CTA */}
       <section className="py-20">
         <div className="container mx-auto px-4 text-center">
-          <AnimatedText text="Ready to Work With Us?" className="text-3xl font-bold mb-4" />
+          <h2 className="heading mb-2">Ready to <span className="text-primary">Work With Us?</span></h2>
           <p className="text-lg text-muted-foreground mb-8 max-w-2xl mx-auto">
             Contact us today to discuss your HVAC and clean room requirements. Our experts are ready to provide
             customized solutions for your industry.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <a
+            <Link
               href="/contact"
               className="bg-primary hover:bg-primary/90 text-primary-foreground px-8 py-3 rounded-lg font-medium transition-colors"
             >
               Get in Touch
-            </a>
-            <a
+            </Link>
+            <Link
               href="tel:+917201872788"
               className="border border-primary hover:bg-primary/10 text-primary px-8 py-3 rounded-lg font-medium transition-colors"
             >
               Call: +91 7201872788
-            </a>
+            </Link>
           </div>
         </div>
       </section>

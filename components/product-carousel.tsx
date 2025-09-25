@@ -35,7 +35,7 @@ const products = [
   {
     title: "HEPA Filters",
     description: "High-efficiency particulate air filters for maintaining clean room classifications.",
-    image: "https://images.unsplash.com/photo-1558618047-3c8c76ca7d13?auto=format&fit=crop&w=800&q=80",
+    image: "https://images.unsplash.com/photo-1581094794329-c8112a89af12?auto=format&fit=crop&w=800&q=80",
     features: ["99.97% efficiency", "Various sizes", "Long service life", "Low pressure drop"],
   },
 ]

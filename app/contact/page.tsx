@@ -8,7 +8,6 @@ import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
 import { Textarea } from "@/components/ui/textarea"
 import { Badge } from "@/components/ui/badge"
-import { AnimatedText } from "@/components/ui/animated-underline-text-one"
 import { AvivaFooter } from "@/components/aviva-footer"
 import { MapPin, Phone, Mail, Clock, Send, CheckCircle } from "lucide-react"
 
@@ -82,12 +81,9 @@ export default function ContactPage() {
     <main className="min-h-screen bg-background">
       {/* Hero Section */}
       <section className="relative py-20 bg-gradient-to-br from-primary/5 to-accent/5">
-        <div className="container mx-auto px-4">
+        <div className="container mx-auto px-4 mt-6">
           <div className="text-center max-w-4xl mx-auto">
-            <Badge variant="secondary" className="mb-4">
-              Contact Us
-            </Badge>
-            <AnimatedText text="Get in Touch" className="text-4xl lg:text-6xl font-bold mb-6" />
+            <h1 className= "text-4xl lg:text-5xl heading mt-24">Get in <span className="heading">Touch</span></h1>
             <p className="text-xl text-muted-foreground mb-8 leading-relaxed">
               Ready to discuss your HVAC and clean room requirements? Our experts are here to help you find the perfect
               solution for your industry needs.
@@ -102,7 +98,7 @@ export default function ContactPage() {
           <div className="grid lg:grid-cols-2 gap-12">
             {/* Contact Form */}
             <div>
-              <AnimatedText text="Send us a Message" className="text-3xl font-bold mb-8" />
+              <h1 className="heading mb-6">Send us a Message</h1>
               <Card>
                 <CardContent className="p-6">
                   {isSubmitted ? (
@@ -215,31 +211,6 @@ export default function ContactPage() {
                   )}
                 </CardContent>
               </Card>
-            </div>
-
-            {/* Contact Information */}
-            <div>
-              <AnimatedText text="Contact Information" className="text-3xl font-bold mb-8" />
-              <div className="space-y-6">
-                {contactInfo.map((info, index) => (
-                  <Card key={index}>
-                    <CardContent className="p-6">
-                      <div className="flex items-start gap-4">
-                        <div className="flex-shrink-0">{info.icon}</div>
-                        <div>
-                          <h3 className="font-semibold text-lg mb-2">{info.title}</h3>
-                          {info.details.map((detail, idx) => (
-                            <p key={idx} className="text-muted-foreground">
-                              {detail}
-                            </p>
-                          ))}
-                        </div>
-                      </div>
-                    </CardContent>
-                  </Card>
-                ))}
-              </div>
-
               {/* Quick Contact */}
               <Card className="mt-8 bg-primary text-primary-foreground">
                 <CardHeader>
@@ -264,6 +235,30 @@ export default function ContactPage() {
                 </CardContent>
               </Card>
             </div>
+
+            {/* Contact Information */}
+            <div>
+              <h1 className="heading mb-6">Contact Information</h1>
+              <div className="space-y-6">
+                {contactInfo.map((info, index) => (
+                  <Card key={index}>
+                    <CardContent className="p-6">
+                      <div className="flex items-start gap-4">
+                        <div className="flex-shrink-0">{info.icon}</div>
+                        <div>
+                          <h3 className="font-semibold text-lg mb-2">{info.title}</h3>
+                          {info.details.map((detail, idx) => (
+                            <p key={idx} className="text-muted-foreground">
+                              {detail}
+                            </p>
+                          ))}
+                        </div>
+                      </div>
+                    </CardContent>
+                  </Card>
+                ))}
+              </div>
+            </div>
           </div>
         </div>
       </section>
@@ -272,7 +267,7 @@ export default function ContactPage() {
       <section className="py-20 bg-muted/30">
         <div className="container mx-auto px-4">
           <div className="text-center mb-12">
-            <AnimatedText text="Visit Our Facility" className="text-3xl font-bold mb-4" />
+            <h1 className="heading">Visit Our Facility</h1>
             <p className="text-lg text-muted-foreground">
               Located in Daman Industrial Estate, we welcome visits to our manufacturing facility.
             </p>

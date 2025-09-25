@@ -1,6 +1,7 @@
 import { Card, CardContent } from "@/components/ui/card"
 import { Target, Eye, Award } from "lucide-react"
 import Image from "next/image"
+import { NumberTicker } from "@/components/ui/number-ticker"
 
 export function WhoWeAre() {
   return (
@@ -10,7 +11,7 @@ export function WhoWeAre() {
           <div className="grid lg:grid-cols-2 gap-12 items-center mb-16">
             <div>
               <h1 className="heading mb-6">
-                Who We Are
+                Who <span className="text-primary">We Are</span>
               </h1>
               <p className="text-lg text-muted-foreground text-balance mb-6">
                 AVIVA HVAC & Clean Room Industries is a leading manufacturer and supplier of high-quality HVAC systems
@@ -22,18 +23,18 @@ export function WhoWeAre() {
               </p>
               <div className="grid grid-cols-2 gap-6">
                 <div>
-                  <div className="text-2xl font-bold text-primary mb-1">500+</div>
+                  <div className="text-2xl font-bold text-primary mb-1"><NumberTicker value={500}>+</NumberTicker></div>
                   <div className="text-sm text-muted-foreground">Projects Delivered</div>
                 </div>
                 <div>
-                  <div className="text-2xl font-bold text-primary mb-1">15+</div>
+                  <div className="text-2xl font-bold text-primary mb-1"><NumberTicker value={15}>+</NumberTicker></div>
                   <div className="text-sm text-muted-foreground">Years Experience</div>
                 </div>
               </div>
             </div>
             <div className="relative">
               <Image
-                src="/Team.jpg?height=400&width=500"
+                src="/Team.jpg"
                 alt="AVIVA Manufacturing Facility"
                 className="w-full h-80 object-cover rounded-lg shadow-lg"
                 width={400}

@@ -1,6 +1,7 @@
 import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
 import { Phone, Mail, MapPin, ChevronRight } from "lucide-react"
+import Link from "next/link"
 
 export function CTASection() {
   return (
@@ -15,13 +16,14 @@ export function CTASection() {
           </p>
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
+            <Link 
+              href="/quote"
+            >
             <Button size="lg" className="text-lg px-8 py-6">
               Get Free Quote
               <ChevronRight className="ml-2 w-5 h-5" />
             </Button>
-            <Button variant="outline" size="lg" className="text-lg px-8 py-6 bg-transparent">
-              Schedule Consultation
-            </Button>
+            </Link>
           </div>
         </div>
 
