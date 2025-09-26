@@ -481,7 +481,7 @@ export default function Navbar() {
 
             {/* CTA Button & Mobile Menu */}
             <div className="flex items-center space-x-4">
-              <Link href="/contact">
+              <Link href="/quote">
                 <Button
                   className="hidden md:flex items-center px-6 py-2.5 bg-primary text-white font-medium rounded-lg  transform hover:scale-105 transit  ion-all duration-200 shadow-lg hover:shadow-xl"
                 >

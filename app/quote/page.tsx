@@ -12,7 +12,7 @@ export default function QuotePage() {
   return (
     <main className="min-h-screen bg-muted/30 py-12">
       <div className="container mx-auto px-4">
-        <div className="max-w-4xl mx-auto">
+        <div className="max-w-4xl mx-auto mt-24">
           {/* Header */}
           <div className="mb-8">
             <Link
@@ -22,7 +22,7 @@ export default function QuotePage() {
               <ArrowLeft className="w-4 h-4 mr-2" />
               Back to Home
             </Link>
-            <h1 className="text-3xl md:text-4xl font-bold text-balance mb-4">
+            <h1 className="heading mb-4">
               Get Your <span className="text-primary">Free Quote</span>
             </h1>
             <p className="text-xl text-muted-foreground text-balance">
