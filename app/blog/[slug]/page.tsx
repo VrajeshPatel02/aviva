@@ -404,7 +404,7 @@ export default function BlogPostPage({ params }: BlogPostPageProps) {
       {/* Article Content */}
       <section className="py-12 px-4">
         <div className="max-w-6xl mx-auto">
-          <div className="bg-white rounded-2xl shadow-lg p-8 md:p-12 lg:p-16 min-w-6xl mx-auto">
+          <div className="bg-white rounded-2xl shadow-lg p-8 md:p-12 lg:p-16 max-w-6xl mx-auto">
             <RenderContent content={post.content} />
           </div>
         </div>

@@ -4,7 +4,7 @@ import { useState, useEffect } from "react"
 import { usePathname } from "next/navigation"
 import { Phone, Mail, Menu, X, ChevronDown, ChevronRight } from "lucide-react"
 import Link from "next/link"
-import { HoverBorderGradient } from "@/components/ui/hover-border-gradient";
+import { Button } from "./ui/button"
 
 const hvacProducts = [
   {
@@ -482,13 +482,11 @@ export default function Navbar() {
             {/* CTA Button & Mobile Menu */}
             <div className="flex items-center space-x-4">
               <Link href="/contact">
-                <HoverBorderGradient
-                  containerClassName="rounded-md"
-                  as="button"
+                <Button
                   className="hidden md:flex items-center px-6 py-2.5 bg-primary text-white font-medium rounded-lg  transform hover:scale-105 transit  ion-all duration-200 shadow-lg hover:shadow-xl"
                 >
                   <span>Get Quote</span>
-                </HoverBorderGradient>
+                </Button>
               </Link>
 
               {/* Mobile Menu Button */}
@@ -644,13 +642,11 @@ export default function Navbar() {
       {/* Mobile CTA Button - Fixed at bottom */}
       <div className="lg:hidden fixed bottom-6 right-6 z-50">
         <Link href="/contact">
-            <HoverBorderGradient
-              containerClassName="rounded-md"
-              as="button"
+            <Button
               className="flex items-center px-6 py-3 bg-primary text-white font-semibold rounded-full shadow-2xl transform hover:scale-105 transition-all duration-200"
             >
               <span>Get Quote</span>
-            </HoverBorderGradient>
+            </Button>
         </Link>
       </div>
     </>

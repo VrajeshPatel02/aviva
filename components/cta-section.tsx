@@ -2,7 +2,6 @@ import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
 import { Phone, Mail, MapPin, ChevronRight } from "lucide-react"
 import Link from "next/link"
-import { HoverBorderGradient } from "@/components/ui/hover-border-gradient";
 
 export function CTASection() {
   return (
@@ -20,13 +19,11 @@ export function CTASection() {
             <Link 
               href="/quote"
             >
-              <HoverBorderGradient
-                containerClassName="rounded-md"
-                as="button"
+              <Button
                 className="flex items-center px-6 py-3 bg-primary text-white font-semibold rounded-full shadow-2xl transform hover:scale-105 transition-all duration-200"
               >
                 <span>Get Quote <ChevronRight className="ml-2 w-5 h-5" /></span>
-              </HoverBorderGradient>
+              </Button>
             </Link>
           </div>
         </div>
