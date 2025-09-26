@@ -2,13 +2,14 @@ import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
 import { Phone, Mail, MapPin, ChevronRight } from "lucide-react"
 import Link from "next/link"
+import { HoverBorderGradient } from "@/components/ui/hover-border-gradient";
 
 export function CTASection() {
   return (
     <section className="py-20 bg-gradient-to-br from-primary/10 via-background to-accent/10">
       <div className="container mx-auto px-4">
         <div className="max-w-4xl mx-auto text-center mb-12">
-          <h2 className="text-3xl md:text-4xl font-bold text-balance mb-6">
+          <h2 className="heading mb-6">
             Ready to Get <span className="text-primary">Started</span>?
           </h2>
           <p className="text-xl text-muted-foreground text-balance mb-8">
@@ -19,10 +20,13 @@ export function CTASection() {
             <Link 
               href="/quote"
             >
-            <Button size="lg" className="text-lg px-8 py-6">
-              Get Free Quote
-              <ChevronRight className="ml-2 w-5 h-5" />
-            </Button>
+              <HoverBorderGradient
+                containerClassName="rounded-md"
+                as="button"
+                className="flex items-center px-6 py-3 bg-primary text-white font-semibold rounded-full shadow-2xl transform hover:scale-105 transition-all duration-200"
+              >
+                <span>Get Quote <ChevronRight className="ml-2 w-5 h-5" /></span>
+              </HoverBorderGradient>
             </Link>
           </div>
         </div>

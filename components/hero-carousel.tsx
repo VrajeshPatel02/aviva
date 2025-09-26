@@ -6,9 +6,9 @@ import { Button } from "@/components/ui/button"
 import { HeroHighlight, Highlight } from "@/components/ui/hero-highlight";
 
 const carouselImages = [
-  "/images/ahu.jpg",
+  "/laurel-and-michael-evans.jpg",
   "/images/cleanroom-1.jpg",
-  "/images/clean-room-2.webp",
+  "/tecnic-bioprocess.jpg",
   "/images/clean-room-3.jpg",
 ]
 

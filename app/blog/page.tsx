@@ -17,7 +17,7 @@ const blogPosts = [
     author: "AVIVA Technical Team",
     publishDate: "2024-01-15",
     readTime: "8 min read",
-    image: "/placeholder.svg?height=300&width=500",
+    image: "/laminar-air-flow-clean-room-equipment.jpg?height=300&width=500",
     featured: true,
   },
   {
@@ -29,7 +29,7 @@ const blogPosts = [
     author: "AVIVA Engineering",
     publishDate: "2024-01-10",
     readTime: "12 min read",
-    image: "/placeholder.svg?height=300&width=500",
+    image: "/industrial-dehumidifier-installation.jpg?height=300&width=500",
     featured: true,
   },
   {
@@ -41,7 +41,7 @@ const blogPosts = [
     author: "AVIVA Service Team",
     publishDate: "2024-01-05",
     readTime: "6 min read",
-    image: "/placeholder.svg?height=300&width=500",
+    image: "/air-handling-unit-with-dehumidifier.jpg?height=300&width=500",
     featured: false,
   },
   {
@@ -53,7 +53,7 @@ const blogPosts = [
     author: "AVIVA Technical Team",
     publishDate: "2023-12-28",
     readTime: "10 min read",
-    image: "/placeholder.svg?height=300&width=500",
+    image: "/dehumidifier-industrial-hvac-blue.jpg?height=300&width=500",
     featured: false,
   },
   {
@@ -65,7 +65,7 @@ const blogPosts = [
     author: "AVIVA Research Team",
     publishDate: "2023-12-20",
     readTime: "7 min read",
-    image: "/placeholder.svg?height=300&width=500",
+    image: "/hepa-filters-air-filtration.jpg?height=300&width=500",
     featured: false,
   },
   {
@@ -77,7 +77,7 @@ const blogPosts = [
     author: "AVIVA Design Team",
     publishDate: "2023-12-15",
     readTime: "9 min read",
-    image: "/placeholder.svg?height=300&width=500",
+    image: "/clean-room-panels-modular-walls.jpg?height=300&width=500",
     featured: false,
   },
 ]
@@ -117,7 +117,7 @@ export default function BlogPage() {
               <Button
                 key={category}
                 variant={category === "All" ? "default" : "outline"}
-                className={category === "All" ? "bg-aviva-green hover:bg-aviva-green/90" : ""}
+                className={category === "All" ? "bg-accent hover:bg-accent/90" : ""}
               >
                 {category}
               </Button>
@@ -141,10 +141,10 @@ export default function BlogPage() {
                     height={300}
                     className="w-full h-64 object-cover group-hover:scale-105 transition-transform duration-300"
                   />
-                  <Badge className="absolute top-4 left-4 bg-aviva-green text-white">{post.category}</Badge>
+                  <Badge className="absolute top-4 left-4 bg-accent text-white">{post.category}</Badge>
                 </div>
                 <CardHeader>
-                  <CardTitle className="text-xl group-hover:text-aviva-green transition-colors">{post.title}</CardTitle>
+                  <CardTitle className="text-xl group-hover:text-accent transition-colors">{post.title}</CardTitle>
                   <CardDescription className="text-slate-600 leading-relaxed">{post.excerpt}</CardDescription>
                 </CardHeader>
                 <CardContent>
@@ -165,7 +165,7 @@ export default function BlogPage() {
                     </div>
                   </div>
                   <Link href={`/blog/${post.slug}`}>
-                    <Button className="w-full bg-aviva-green hover:bg-aviva-green/90 group">
+                    <Button className="w-full bg-accent hover:bg-accent/90 group">
                       Read Article
                       <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
                     </Button>
@@ -192,10 +192,10 @@ export default function BlogPage() {
                     height={250}
                     className="w-full h-48 object-cover group-hover:scale-105 transition-transform duration-300"
                   />
-                  <Badge className="absolute top-3 left-3 bg-aviva-green text-white text-xs">{post.category}</Badge>
+                  <Badge className="absolute top-3 left-3 bg-accent text-white text-xs">{post.category}</Badge>
                 </div>
                 <CardHeader className="pb-3">
-                  <CardTitle className="text-lg group-hover:text-aviva-green transition-colors line-clamp-2">
+                  <CardTitle className="text-lg group-hover:text-accent transition-colors line-clamp-2">
                     {post.title}
                   </CardTitle>
                   <CardDescription className="text-sm text-slate-600 line-clamp-3">{post.excerpt}</CardDescription>
@@ -214,7 +214,7 @@ export default function BlogPage() {
                   <Link href={`/blog/${post.slug}`}>
                     <Button
                       variant="outline"
-                      className="w-full group border-aviva-green text-aviva-green hover:bg-aviva-green hover:text-white bg-transparent"
+                      className="w-full group border-accent text-accent hover:bg-accent hover:text-white bg-transparent"
                     >
                       Read More
                       <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
@@ -223,24 +223,6 @@ export default function BlogPage() {
                 </CardContent>
               </Card>
             ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Newsletter Section */}
-      <section className="py-16 px-4 bg-secondary text-white">
-        <div className="max-w-4xl mx-auto text-center">
-          <h2 className="text-3xl font-bold mb-4">Stay Updated</h2>
-          <p className="text-slate-200 mb-8 text-lg">
-            Subscribe to our newsletter for the latest insights in HVAC technology and clean room solutions.
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 max-w-md mx-auto">
-            <input
-              type="email"
-              placeholder="Enter your email"
-              className="flex-1 px-4 py-3 rounded-lg text-slate-800 outline focus:ring-2 focus:ring-aviva-green"
-            />
-            <Button className="bg-primary hover:bg-primary/90 px-8">Subscribe</Button>
           </div>
         </div>
       </section>
